@@ -1,19 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Full Stack Flask API</title>
+    <title>Iris Species Machine Learning Demo</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
-<h1>Grant Aguinaldo</h1>
+<br>
+<br>
+<br>
+
+<center>
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md">
+          1 of 6
+        </div>
+
+        <div class="col-md">
+
+            <div class="jumbotron">
+                <h2 class="display-4">Iris Species Machine Learning Demo!</h2>
+                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <hr class="my-4">
+                  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                  <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Iris_flower_data_set" role="button">Learn More</a>
+                  </p>
+            </div>
+
+        </div>
+
+        <div class="col-md">
+          3 of 6
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md">
+          4 of 6
+        </div>
+
+        <div class="col-md">
+
+            <form>
+              <div class="form-group">
+                <label for="sepalLength">Sepal Length (cm)</label>
+                <input type="sepal_length" class="form-control" id="_sepalLength" placeholder="Sepal Length">
+              </div>
+
+              <div class="form-group">
+                <label for="sepalWidth">Sepal Width (cm)</label>
+                <input type="sepal_width" class="form-control" id="_sepalWidth" placeholder="Sepal Width">
+              </div>
+
+              <div class="form-group">
+                <label for="petalLength">Petal Length (cm)</label>
+                <input type="petal_length" class="form-control" id="_petalLength" placeholder="Petal Length">
+              </div>
+
+              <div class="form-group">
+                <label for="petalWidth">Petal Width (cm)</label>
+                <input type="petal_width" class="form-control" id="_petalWidth" placeholder="Petal Width">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Predict Iris Class</button>
+            </form>
+
+        </div>
+
+        <div class="col-md">
+          6 of 6
+        </div>
+
+      </div>
+
+    </div>
+</center>
+
+<br>
+<br>
+<br>
 
 <body>
-
-    <!-- TODO:  NEED TO LINK TO AN EXTERNAL .JS FILE FOR API CALLS.
-                WILL NEED TO CREATE A STATIC FOLDER.
-
-     -->
 
     <script type="text/javascript" src="{{ url_for('static', filename='./javascript/app.js')}}"></script>
 
