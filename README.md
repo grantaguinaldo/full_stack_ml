@@ -17,3 +17,19 @@ The objective of this project is to build a basic machine learning model and cre
 * With a working API that can be called, we will then make a simple front end that will take values in from a form, pass the data to the API, retrieve the result and render the result to the page.
 
 * The final working front end will also be pushed onto Heroku.
+
+---
+
+### Workplan for Front End 
+
+* Create a bootstrap form with four (4) text boxes. These four boxes will correspond to the four leaf characteristics of the Iris sample.
+
+* Also create a submit button on the form.
+
+* Once data is in the form, and the submit button, the app will get the data in the form and create the proper connection string for the API:
+
+	`/prediction?sepallen={}&sepalwid={}&petallen={}&petalwid={}`
+	
+* Once the API returns the JSON, the app will need to modify the inner HTML and parse the JSON and render the results to the screen. We will need to format the decimal values of the class probabilities for readability once rendered to the screen.
+
+---
