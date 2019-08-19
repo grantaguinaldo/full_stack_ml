@@ -26,8 +26,8 @@ def class2string(x):
         raise Exception('Based on the input values provided, unable to predict the Iris class of {}'.format(x))
 
 
-# TEST CASE 1: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=5
-# TEST CASE 2: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=0.2
+# TEST CASE CLASS 0: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=5
+# TEST CASE CLASS 2: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=0.2
 
 @app.route('/prediction', methods=['GET'])
 def get_prediction():
@@ -56,8 +56,9 @@ def get_prediction():
                                        'iris_class_virginica_prob',
                                        'iris_class_versicolor_prob'], y_pred_prob[0].tolist()))
 
-    # https://www.python.org/dev/peps/pep-0448/
+    # Dict unpacking.
     # Only works on Python 3.5 and greater
+    # https://www.python.org/dev/peps/pep-0448/
     return jsonify({**y_pred_class_dict, **y_pred_class_prob_dict})
 
 
