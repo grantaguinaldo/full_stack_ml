@@ -8,11 +8,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-
-
 </head>
 
 <br>
@@ -45,7 +40,7 @@
       <div class="row">
 
         <div class="col-md">
-          1 of 5
+          <!-- 1 of 5 -->
         </div>
 
         <div class="col-md">
@@ -88,7 +83,7 @@
         </div>
 
         <div class="col-md">
-          2 of 5
+          <!-- 2 of 5 -->
         </div>
 
       </div>
@@ -99,19 +94,27 @@
 
         <div class="col-md">
           <pr>
-            3 of 5
+            <!-- 3 of 5 -->
           </pr>
         </div>
 
         <div class="col-md">
 
             <h4>Results From our Machine Learning Model.</h4>
-
+              <br>
+            <!-- Render the name of Iris to the DOM. -->
             <p id='json_response'></p>
+              <br>
+            <!-- Render the prob of each of Iris class to the DOM. -->
+            <p id='json_response_2'></p>
+              <br>
+            <p id='json_response_3'></p>
+              <br>
+            <p id='json_response_4'></p>
         </div>
 
         <div class="col-md">
-          5 of 5
+          <!-- 5 of 5 -->
         </div>
 
       </div>
@@ -126,7 +129,6 @@
 <body>
 
     <script src="{{url_for('static', filename='app.js')}}"></script>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
