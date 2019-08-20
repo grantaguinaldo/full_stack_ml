@@ -1,5 +1,6 @@
 // Code works if placed directly into the HTML oage.
 // Problem linking .js file from within the Jinja template.
+console.log('Hi From the Top')
 
 // Select DOM elements and assign to variables.
 var $petalWidth = document.getElementById('_petalWidth');
@@ -8,6 +9,7 @@ var $sepalWidth = document.getElementById('_sepalWidth');
 var $sepalLength = document.getElementById('_sepalLength');
 var $searchBtn = document.getElementById('searchBtn');
 var $eraseBtn = document.getElementById('eraseBtn');
+var $json_response = document.getElementById('json_response');
 
 // Add event listeners and assign to functions.
 $searchBtn.addEventListener("click", predictClick);
@@ -21,7 +23,7 @@ function eraseData(){
     $petalLength.value = '';
     $sepalWidth.value = '';
     $sepalLength.value = '';
-    // TODO: Need to clear out the inner HTML from the prediction.
+    $json_response.value = '';
 };
 
 // Build out functions to take data in form and make prediction.
@@ -42,9 +44,16 @@ function predictClick(){
     Plotly.d3.json(connectionString, function(error, response) {
       if (error) return console.warn(error);
 
+    console.log('Hi from the Event Listener Top');
+
+    var jsonObj = JSON.parse(response);
+
+    $json_response.innerHTML = jsonObj.iris_class_name;
+
     // Contains JSON response.
-    console.log(response);
-        
-    // Check out: https://www.w3schools.com/js/js_json_parse.asp
+    console.log(jsonObj);
+
+    console.log('Hi from the Event Listener Bottom');
+
     });
 };
