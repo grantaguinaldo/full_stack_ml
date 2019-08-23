@@ -28,8 +28,11 @@ The objective of this project is to build a basic machine learning model and cre
 
 * Once data is in the form, and the submit button, the app will get the data in the form and create the proper connection string for the API:
 
-	`/prediction?sepallen={}&sepalwid={}&petallen={}&petalwid={}`
+	`/api?sepallen={}&sepalwid={}&petallen={}&petalwid={}`
 	
 * Once the API returns the JSON, the app will need to modify the inner HTML and parse the JSON and render the results to the screen. We will need to format the decimal values of the class probabilities for readability once rendered to the screen.
 
 ---
+###
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/56/Iris_dataset_scatterplot.svg)
