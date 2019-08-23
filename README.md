@@ -33,6 +33,24 @@ The objective of this project is to build a basic machine learning model and cre
 * Once the API returns the JSON, the app will need to modify the inner HTML and parse the JSON and render the results to the screen. We will need to format the decimal values of the class probabilities for readability once rendered to the screen.
 
 ---
-###
+The Iris dataset is a famous multivariate dataset. As noted on Wikipedia:
+
+>The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Based on the combination of these four features, [[Ronald Fisher]](https://en.wikipedia.org/wiki/Ronald_Fisher) developed a linear discriminant model to distinguish the species from each other.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/56/Iris_dataset_scatterplot.svg)
+
+The three Iris species that are in this dataset include: Setosa, Versicolor, Virginica.
+
+#### Setosa 
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg)
+
+#### Versicolor
+
+![](https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg)
+
+#### Virginica
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/9f/Iris_virginica.jpg)
+
+As you can see, each of these species are shaped differently, and this shape is distinctive enough that each species will have its own distribution of leaf measurements that are unique to that species.  It is this diffrence that allows us to take a set of measurements and use a machine learning model to predict the species of Iris.
