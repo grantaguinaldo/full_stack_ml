@@ -49,7 +49,6 @@ function predictClick(){
     console.log(connectionString);
 
     //Make API get request to the relevant end point.
-    /*
     fetch(connectionString)
         .then(function(response) {
             return response.json();
@@ -71,8 +70,6 @@ function predictClick(){
                                 ' ' + myJson.iris_class_versicolor_prob.toFixed(2) + '.'
   });
 
-
-    */
 
 
 };
