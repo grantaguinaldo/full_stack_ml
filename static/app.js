@@ -48,30 +48,27 @@ function predictClick(){
 
     console.log(connectionString);
 
-    //Make API get request to the relevant end point.
-    fetch(connectionString)
-        .then(function(response) {
-            return response.json();
-    });
-        .then(function(myJson) {
+    Plotly.d3.json(connectionString, function(error, response) {
+    if (error) return console.warn(error);
 
     // Render the JSON response back to the DOM using innerHTML.
     $json_response.innerHTML =  'Based on our machine learning model,\
                                 the predicted class of Iris is:' + ' '
-                                + myJson.iris_class_name + '.'
+                                + response.iris_class_name + '.'
 
     $json_response_2.innerHTML = 'The probability of the Setoasa class is' +
-                                 ' ' + myJson.iris_class_setosa_prob.toFixed(2) + '.' + ' '
+                                 ' ' + response.iris_class_setosa_prob.toFixed(2) + '.' + ' '
 
     $json_response_3.innerHTML = 'The probability of the Virginica class is' +
-                                ' ' + myJson.iris_class_virginica_prob.toFixed(2) + '.' + ' '
+                                ' ' + response.iris_class_virginica_prob.toFixed(2) + '.' + ' '
 
     $json_response_4.innerHTML = 'The probability of the Versicolor class is' +
-                                ' ' + myJson.iris_class_versicolor_prob.toFixed(2) + '.'
-  });
-
-
+                                ' ' + response.iris_class_versicolor_prob.toFixed(2) + '.'
+    });
 
 };
+
+
+
 
 
