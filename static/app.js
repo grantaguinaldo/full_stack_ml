@@ -40,13 +40,16 @@ function predictClick(){
     var sepalLengthValue = $sepalLength.value;
 
     // Build connection string from variables.
-    var connectionString = '/prediction?sepallen='
+    var connectionString = '/api?sepallen='
                             + sepalWidthValue + '&'
                             + 'sepalwid=' + sepalWidthValue + '&'
                             + 'petallen=' + petalLengthValue + '&'
                             + 'petalwid=' + petalWidthValue;
 
-    // Make API get request to the relevant end point.
+    console.log(connectionString);
+
+    //Make API get request to the relevant end point.
+    /*
     fetch(connectionString)
         .then(function(response) {
             return response.json();
@@ -66,7 +69,12 @@ function predictClick(){
 
     $json_response_4.innerHTML = 'The probability of the Versicolor class is' +
                                 ' ' + myJson.iris_class_versicolor_prob.toFixed(2) + '.'
-
   });
 
+
+    */
+
+
 };
+
+

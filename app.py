@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from joblib import load
+import pickle
 import numpy as np
 
 app = Flask(__name__)
@@ -29,7 +29,7 @@ def class2string(x):
 # TEST CASE CLASS 0: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=5
 # TEST CASE CLASS 2: /prediction?sepallen=5.1&sepalwid=3.5&petallen=1.4&petalwid=0.2
 
-@app.route('/prediction', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def get_prediction():
 
     sepal_length = request.args.get('sepallen')
@@ -44,7 +44,8 @@ def get_prediction():
 
     input_array = np.array(input_list).reshape(1, -1)
 
-    pkl_lr = load('iris_class')
+    with open('pickle_model.pkl', 'rb') as f:
+        pkl_lr = pickle.load(f)
 
     y_pred_class = pkl_lr.predict(input_array)
     y_pred_prob = pkl_lr.predict_proba(input_array)
